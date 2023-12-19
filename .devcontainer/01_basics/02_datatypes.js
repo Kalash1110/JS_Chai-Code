@@ -60,3 +60,24 @@ console.log(null>=0); //true,null is converted to number
 
 console.log("2"==2); //checks only values by conversion
 console.log("2"===2) //strict check,checks data type as well
+
+
+let first=Symbol('123'); //Even values are same but symbol gives uniquenesss
+let sec=Symbol("123");
+
+console.log(first===sec); //gives false
+
+            //PRIMITIVE DATA TYPES
+
+let arr=["Kalash","Jha",2]; //object type
+let obj={
+    name:"Kalash",
+    title:"Jha"             //object type
+}
+
+let sum=function add() {
+    return 2+3;             //function object type
+}
+console.log(typeof arr);
+console.log(typeof obj);
+console.log(typeof sum);
