@@ -75,9 +75,27 @@ let obj={
     title:"Jha"             //object type
 }
 
+
 let sum=function add() {
     return 2+3;             //function object type
 }
 console.log(typeof arr);
 console.log(typeof obj);
 console.log(typeof sum);
+
+let strold="Kalashjha"
+let strnew=str1;
+strnew="New string"
+console.log(strold); //No change in strold as call by value since string is primitive
+console.log(strnew);  
+
+let user={
+    email:"Kalash@gmail",
+    id:2
+}
+
+let new_user=user
+new_user.id=5   //changes the id of user also as call by reference since object is non primitive
+console.log(user.id);
+console.log(new_user.id);
+
