@@ -45,4 +45,4 @@ console.log(url.replace("%20","k"));
 console.log(url.includes("kalash")) //checks whether given thing is present in string or not
 
 let fordash="Kalash-jha-begusarai"
-console.log(fordash.split('-'));
+console.log(fordash.split('-')); //gives an array of strings as output
