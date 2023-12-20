@@ -32,6 +32,12 @@ console.log("Start array og: ",arr);
 const sl=arr.slice(2,5)
 console.log("sliced array",sl);
 console.log("After slice og array: ",arr);
+//No change in original array, slice(i,n) moves from i to n-1 index
+
+
 const spl=arr.splice(2,5)
 console.log("spliced array",spl);
 console.log("After splice og array",arr);
+
+//Change in original array, spl(i,n) moves from th index to 
+// i+nth index and all those elements in splice are not in original array now
