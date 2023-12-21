@@ -57,4 +57,18 @@ console.log(Object.values(normalUser));
 console.log(Object.entries(normalUser));
 
 //Checks whether that key is present in object or not
-console.log(tinderUser.hasOwnProperty(id));
+console.log(tinderUser.hasOwnProperty('id'));
+
+
+//----------------OBJECT DESTRUCTURE -------------
+const course={
+    coursename:"JS",
+    price:300,
+    instructor:"Hitesh"
+}
+
+//To remove dot operator we do destructuring
+//coursename as long name gets substitued with nam as short variable 
+const{coursename:nam}=course
+
+console.log(nam);
