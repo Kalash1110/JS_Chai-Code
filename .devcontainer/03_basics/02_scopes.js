@@ -28,7 +28,7 @@ function one(){
 
     function two(){
         const website="youtube"
-        console.log(Username);
+        console.log(Username); //username accessible inside two
     }
     // console.log(website);  //not accessible outside two
 
@@ -37,3 +37,30 @@ function one(){
 }
 
 one()
+
+
+
+
+
+//---------- Function expression and hoisting ----------
+
+
+//Throws error
+// console.log(addTwo(5))  //using function before its definition and declarataion 
+
+
+const addTwo=function(val){
+    return val+2
+}
+
+
+
+//Does not throw error
+console.log(addOne(90)) //using function before its definition and declarataion 
+
+
+function addOne(num){
+    return num+1
+}
+
+
