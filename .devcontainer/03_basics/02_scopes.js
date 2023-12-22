@@ -20,3 +20,20 @@ console.log(k); //you should get 900 generally but you get 80 as var is not limi
 console.log(p); //still p's value is independent of if block
 
 
+
+
+//------------- Functions inside functions ------------
+function one(){
+    const Username="Kalash"
+
+    function two(){
+        const website="youtube"
+        console.log(Username);
+    }
+    // console.log(website);  //not accessible outside two
+
+    two() //invoked after function one is invoked
+
+}
+
+one()
