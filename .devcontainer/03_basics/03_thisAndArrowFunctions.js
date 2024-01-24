@@ -46,3 +46,20 @@ const AddTwo=(num1,num2)=>{
 }
 
 console.log(AddTwo(3,4)); 
+
+
+
+//Impilicit return (Used for one liner statements)
+const addThree=(num1,num2,num3)=>num1+num2+num3
+
+//You can used parentheses to wrap the return values
+// const addThree= (num1,num2,num3)=> (num1+num2+num3)
+
+//For example to return object using implicit return,you have to wrap it in parentheses
+//Without parentheses it prints undefined
+
+const objRet=()=> ({ name:"Kalash"})
+
+console.log(objRet()) //prints returned object
+
+
