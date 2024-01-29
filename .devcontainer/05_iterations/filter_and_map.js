@@ -31,3 +31,32 @@ const books = [
   )
 
   console.log(_1995_and_history);
+
+  
+//For each didn't return anything but map does
+  const myNumbers=[1,2,3,4,5,6,7,8,9]
+  const newNums=myNumbers.map(
+    (item)=>{
+      return item=item+10
+    }
+  )
+
+  console.log(newNums);
+
+
+  //CHAINING
+
+  const chain=myNumbers.map(
+    (num)=>{ return num*10}  //Here we multiply by 10
+  ).map(
+    (num)=>{ return num+1} //we get the multiplied value,now
+    //we are adding 10 to it
+  ).filter(
+    (num)=>{
+      if(num>=40)
+        return num   //getting values greater than 40 after chaining operations
+    }
+  )
+
+
+  console.log(chain);
