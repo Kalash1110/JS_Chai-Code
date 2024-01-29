@@ -31,7 +31,8 @@ const books = [
   )
 
   console.log(_1995_and_history);
-
+//We use filter for filtering uing true false returns
+//but for map we do operations and then get the return 
   
 //For each didn't return anything but map does
   const myNumbers=[1,2,3,4,5,6,7,8,9]
