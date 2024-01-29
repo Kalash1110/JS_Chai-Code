@@ -11,7 +11,7 @@ coding.forEach(
 
 
 //Using arrow functions
-coding.forEach(element => { console.log(element)
+coding.forEach( (element) => { console.log(element)
 });
 
 function printMe(item){
@@ -47,3 +47,45 @@ myCoding.forEach(
         
     }
 )
+
+
+// For-each loops return nothing even if you want to return 
+
+
+const values=coding.forEach(
+    (item)=>{
+        return item
+    }
+)
+
+console.log(values); //undefined is printed as nothing is returned
+
+
+//Filter returns whatever you want based on condition 
+const myNums=[1,2,3,4,5,6,7,8,9]
+
+wrongNums= myNums.filter(
+    (num )=> {num>4}  //returns nothing
+    //recall that to get return from arrow function you have
+    //to use normal parentheses intead of curly braces
+)
+newNums=myNums.filter(
+    (num)=>(
+        num>4  //normal parentheses used
+    )
+
+    //or you can use return keyword for curly braces
+    // (num)=>{ return num>4}
+)
+console.log(wrongNums); //gets undefined
+console.log(newNums); //gets all values
+
+forEachNums=[]
+myNums.forEach(
+    (num)=>{
+        if(num>4)
+            forEachNums.push(num)
+    }
+)
+
+console.log(forEachNums);
