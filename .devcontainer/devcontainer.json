@@ -9,7 +9,8 @@
 		  "extensions": [
 			"esbenp.prettier-vscode",
 			"vscode-icons-team.vscode-icons",
-			"wayou.vscode-todo-highlight"
+			"wayou.vscode-todo-highlight",
+			"ritwickdey.liveserver"
 		  ],
 		  "settings": {
 			"editor.fontSize": 22,
@@ -17,7 +18,8 @@
 			"editor.wordWrap": "on"
 		  }
 		}
-	  }
+	  },
+	  "forwardPorts": [ 7071, 5500 ]
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
