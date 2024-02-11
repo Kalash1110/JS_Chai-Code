@@ -14,11 +14,36 @@
     </div>
 </body>
 <script>
+
+    //Traversing child from parent
+
     // const par=document.getElementsByClassName('parent')
     const par=document.querySelector('.parent');
     console.log(par);
-    console.log(par.children);  //gives collections
+    console.log(par.children);  //gives collections you are accessing divs inside parent class
+    console.log(par.children[1]); //access values
 
+    for (let i = 0; i < par.children.length; i++) {
+        const element = par.children[i];
+        console.log(element.innerHTML);
+        
+    }
+
+    par.children[1].style.color='orange'; //color of 1st index changed
+
+    console.log(par.firstElementChild); //gives first element child
+    console.log(par.lastElementChild); //gives last element child
+
+
+
+    //Want to traverse parent thorugh child
+
+    const one=document.querySelector('.day') //gets first element
+    console.log(one.parentElement); //Go to parent
+    console.log(one.nextElementSibling); //Go to sibling i.e. tuesday as one is monday
+
+
+    console.log(par.childNodes);  //Not onl;y monday tuesday but an entire complex tree structure is there
 </script>
 
 </html>
