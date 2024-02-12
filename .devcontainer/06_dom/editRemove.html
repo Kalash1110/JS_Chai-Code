@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai and Code | DOM</title>
+</head>
+<body style="background-color: black; color: white;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+    
+</body>
+<script>
+
+    //Using function to add list in ul
+    function addList(langName){
+
+        eleme=document.createElement('li');
+        eleme.innerHTML=langName;
+
+        const par=document.querySelector('.language');
+        par.appendChild(eleme);
+
+
+    }
+
+    function optimisedAddList(langName){
+
+        //In this function you are not traversing the entire tree hence a bit more optimised than earlier
+        ele=document.createElement('li');
+        const text=document.createTextNode(langName);
+        ele.appendChild(text);
+        document.querySelector('.language').appendChild(ele);
+    }
+
+    addList('python')
+    addList('Java')
+    optimisedAddList('Golang')
+
+
+
+    //Editing values
+    const secLang=document.querySelector('li:nth-child(2)')  //If you want to select python
+    // secLang.innerHTML='mojo'  //simple method but unoptimised
+
+
+    //Optimised editing
+    ele=document.createElement('li');
+    ele.textContent='mojo'
+    // secLang.appendChild(.appendChild(document.createTextNode('mojo')))  //this adds mojo on python not edits
+    secLang.replaceWith(ele);
+
+    //Another edit(Not otpmised)
+    const firstLang=document.querySelector('li:first-child')
+    firstLang.outerHTML='<li>Typescript</li>'
+
+
+    //Another editing (optimised)
+    // const firstLang=document.querySelector('li:first-child') //editing js
+    // new_li=document.createElement('li');
+    // new_li.textContent='typescript';
+    // firstLang.replaceWith(new_li);
+
+
+    //Removing values
+
+    const lastLang=document.querySelector('li:last-child')
+    lastLang.remove()
+
+    
+
+</script>
+</html>
