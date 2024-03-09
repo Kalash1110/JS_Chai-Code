@@ -22,15 +22,66 @@
 <script>
 
     //Approach of using onclick
+
     //1. Injecting in HTML but not scalable
     // <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" onclick="alert('owl')"></li>
 
 
-    //2.Writing in script
+    //2.Writing in script ,gives less features
+    // document.getElementById('owl').onclick=function(){
+    //     alert('Owl')
+    // }
 
-    document.getElementById('owl').onclick=function(){
-        alert('Owl')
-    }
+    // 3.Using event listeners
+    //There is a third parameter also,takes boolean,by default third parameter is false
+
+    // document.getElementById('owl').addEventListener('click',function(){
+    //     alert("Owl clicked")
+    // })
+
+    //4. More earlier methods were using jQuery and attachEvent()
+
+    //Important events to learn 
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+
+    //If false then event bubbling - Inside to outside
+    //First owl click comes on console,then images clicked comes
+    document.getElementById('images').addEventListener('click',function(e){
+        console.log("Images clicked")
+    },false)
+
+    document.getElementById('owl').addEventListener('click',function(e){
+        console.log("Owl clicked")
+    },false)
+
+
+
+    // If  true then  event capturing - Outside to inside
+    //First images click comes on console,then owl clicked comes
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("Images clicked")
+    // },true)
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log("Owl clicked")
+    // },true)
+
+
+        //To stop propogation,assume after getting the inside one,you want to stop event propogation,i.e. only on inside and not on outside.
+        document.getElementById('images').addEventListener('click',function(e){
+        console.log("Images clicked")
+    })
+
+    document.getElementById('owl').addEventListener('click',function(e){
+        console.log("Owl clicked")
+        e.stopPropagation()
+    })
+
+
     
 </script>
 </html>
